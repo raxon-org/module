@@ -16,12 +16,12 @@ use Defuse\Crypto\Exception\BadFormatException;
 use Defuse\Crypto\Exception\EnvironmentIsBrokenException;
 
 use Error;
-use Exception_ol;
+use Exception;
 use ReflectionException;
 
-use Exception_ol\UrlEmptyException;
-use Exception_ol\ObjectException;
-use Exception_ol\FileWriteException;
+use Exception\UrlEmptyException;
+use Exception\ObjectException;
+use Exception\FileWriteException;
 
 class Core
 {
