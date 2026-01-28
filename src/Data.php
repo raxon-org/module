@@ -8,10 +8,10 @@
  */
 namespace Module;
 
-use Exception\DirectoryCreateException;
-use Exception\FileWriteException;
-use Exception\ObjectException;
-use Exception;
+use Exception_ol\DirectoryCreateException;
+use Exception_ol\FileWriteException;
+use Exception_ol\ObjectException;
+use Exception_ol;
 
 class Data {
     const FLAGS = 'flags';

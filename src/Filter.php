@@ -8,9 +8,9 @@
  */
 namespace Module;
 
-use Exception\LocateException;
-use Exception\ObjectException;
-use Exception;
+use Exception_ol\LocateException;
+use Exception_ol\ObjectException;
+use Exception_ol;
 
 class Filter extends Data {
     const NAME = 'Filter';

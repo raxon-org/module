@@ -8,7 +8,7 @@
  */
 namespace Module;
 
-use Exception;
+use Exception_ol;
 
 class Sort extends Data {
     const ASC = 'ASC';
