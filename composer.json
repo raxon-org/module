@@ -5,6 +5,7 @@
     "keywords" : ["operation","microstorm", "micro", "storm","raxon", "org" ],
     "homepage": "https://raxon.org",
     "require": {
+      "raxon/exception": ">=2026.01.01"
     },
     "autoload": {
       "psr-4": {
