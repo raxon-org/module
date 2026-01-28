@@ -1,0 +1,19 @@
+{
+    "name" : "raxon/module",
+    "description" : "raxon/module see https://raxon.org for detailed usage",
+    "type" : "package",
+    "keywords" : ["operation","microstorm", "micro", "storm","raxon", "org" ],
+    "homepage": "https://raxon.org",
+    "require": {
+    },
+    "autoload": {
+      "psr-4": {
+        "Module\\": "src/"
+      }
+    },
+    "license" : "MIT",
+    "authors" : [{
+        "name" : "Remco van der Velde",
+        "email" : "development@universeorange.com"
+    }]
+}
