@@ -186,7 +186,7 @@ class File {
         }
     }
 
-    public static function exist(string $url): bool
+    public static function exists(string $url): bool
     {
         if(!is_string($url)){
             return false;
@@ -262,7 +262,7 @@ class File {
         }
         if(
             $overwrite &&
-            File::exist($destination)
+            File::exists($destination)
         ){
             if(File::is_link($destination)){
                 File::remove($destination);
@@ -278,7 +278,7 @@ class File {
             return true;
         } elseif(
             !$overwrite &&
-            File::exist($destination)
+            File::exists($destination)
         ){
             throw new FileMoveException('Destination file already exists...');
         } else {
@@ -300,25 +300,25 @@ class File {
         if(substr($destination, -1, 1) === DIRECTORY_SEPARATOR){
             $destination = substr($destination, 0, -1);
         }
-        $exist = File::exist($source);
-        if($exist === false){
+        $exists = File::exists($source);
+        if($exists === false){
             throw new FileMoveException('Source file doesn\'t exist...');
         }
-        $exist = File::exist($destination);
+        $exists = File::exists($destination);
         if(
             $overwrite === false &&
-            File::exist($destination)
+            File::exists($destination)
         ){
             throw new FileMoveException('Destination file already exists...');
         }
         if(Dir::is($source)){
             if(
-                $exist &&
+                $exists &&
                 $overwrite === false
             ){
                 throw new FileMoveException('Destination directory exists...');
             }
-            elseif($exist){
+            elseif($exists){
                 if(Dir::is($destination)){
                     throw new FileMoveException('Destination directory exists and needs to be deleted first...');
                 } else {
@@ -466,7 +466,7 @@ class File {
 
     public static function tail(string $url, int $n=1, bool $is_array=false) : string | array
     {
-        if(File::exist($url)){
+        if(File::exists($url)){
             if($n < 1){
                 $n = 1;
             }

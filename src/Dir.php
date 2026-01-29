@@ -55,15 +55,15 @@ class Dir {
         if($url !== Dir::SEPARATOR){
             $url = rtrim($url, Dir::SEPARATOR);
         }
-        if(File::exist($url) && !Dir::is($url)){
+        if(File::exists($url) && !Dir::is($url)){
             unlink($url);
         }
-        if(File::exist($url) && Dir::is($url)){
+        if(File::exists($url) && Dir::is($url)){
             return true;
         } else {
             try {
                 $mkdir = false;
-                if(!File::exist($url)){
+                if(!File::exists($url)){
                     if($chmod === null){
                         $mkdir = @mkdir($url, Dir::CHMOD, true);
                     } else {
@@ -78,13 +78,13 @@ class Dir {
         }
     }
 
-    public static function exist(string $url): bool
+    public static function exists(string $url): bool
     {
         if($url !== Dir::SEPARATOR){
             $url = rtrim($url, Dir::SEPARATOR);
         }
         if(
-            File::exist($url) === true &&
+            File::exists($url) === true &&
             Dir::is($url) === true
         ){
             return true;
